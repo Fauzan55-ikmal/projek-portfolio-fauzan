@@ -119,13 +119,12 @@ body {
    HERO SECTION STYLES (Polished & Balanced)
    ========================================= */
 .hero {
-  padding: 100px 20px 60px;
-  background-color: var(--bg-primary);
-  color: var(--text-main);
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 80px 20px;
+  background-color: var(--bg-primary);
 }
 
 .hero-container {
