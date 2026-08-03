@@ -1,12 +1,11 @@
-/* Import Font Profesional: Inter */
+/* ==========================================================================
+   1. IMPORT FONT & DESIGN TOKENS (Variabel Global)
+   ========================================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* ==========================================
-   1. DESIGN TOKENS
-   ========================================== */
 :root {
   --bg-primary: #ffffff; /* Background utama putih */
-  --bg-navbar: #f8fafc; /* Navbar putih keabuan tipis agar kontras dengan body */
+  --bg-navbar: #f8fafc; /* Navbar putih keabuan tipis */
   --text-main: #000000; /* Hitam pekat mutlak */
   --border-color: #e2e8f0; /* Garis border tipis yang elegan */
 
@@ -15,9 +14,9 @@
   --nav-height: 70px;
 }
 
-/* ==========================================
+/* ==========================================================================
    2. RESET & BASE STYLES
-   ========================================== */
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -35,18 +34,18 @@ body {
   line-height: 1.6;
 }
 
-/* ==========================================
+/* ==========================================================================
    3. REUSABLE UTILITIES
-   ========================================== */
+   ========================================================================== */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* ==========================================
+/* ==========================================================================
    4. NAVBAR COMPONENT
-   ========================================== */
+   ========================================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -97,59 +96,16 @@ body {
   opacity: 0.5;
 }
 
-/* Tombol Resume */
-.btn-outline {
-  background-color: transparent;
-  color: #000000 !important; /* Paksa hitam pekat */
-  border: 1px solid #000000;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-outline:hover {
-  background-color: #000000;
-  color: #ffffff !important;
-}
-
-/* ==========================================
-   MOBILE DROPDOWN & HAMBURGER STYLES
-   ========================================== */
-.nav-toggle-input {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-}
-
-.hamburger span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: var(--text-main);
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-/* =========================================
-   HERO SECTION STYLES (Centered Layout)
-   ========================================= */
+/* ==========================================================================
+   5. HERO SECTION COMPONENT
+   ========================================================================== */
 .hero {
-  padding: 80px 20px 20px; /* Memangkas padding agar lebih compact */
+  padding: 80px 20px 20px;
   background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
   background-size: 28px 28px;
   background-color: var(--bg-primary);
   color: var(--text-main);
-  height: 100vh; /* Menggunakan height 100vh agar pas satu layar */
+  height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -163,47 +119,37 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px; /* Jarak proporsional antar elemen */
+  gap: 14px;
   width: 100%;
 }
 
 .hero-image {
+  flex: 1;
   display: flex;
   justify-content: center;
+  min-width: 280px;
   margin-bottom: 5px;
 }
 
 .hero-image img {
-  width: 170px; /* Sedikit diperkecil dari 220px agar proporsional */
-  height: 170px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #0f172a;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid var(--border-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px; /* Ini pengatur jarak vertikal antar elemen supaya rapi ke bawah */
+  gap: 16px;
 }
 
 .hero-content h1,
 .hero-content p {
-  margin: 0; /* Hapus margin bawaan browser biar nggak saling dorong */
-}
-
-.hero-greeting-badge {
-  display: inline-block;
-  background-color: #f1f5f9;
-  color: #334155;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  border: 1px solid #e2e8f0;
+  margin: 0;
 }
 
 .hero-title {
@@ -225,84 +171,12 @@ body {
   margin: 0 6px;
 }
 
-.hero-description {
-  font-size: 0.98rem;
-  color: #64748b;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  max-width: 600px;
-  text-align: center;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-/* =========================================
-   BUTTON STYLES (Fixed Hover)
-   ========================================= */
-.btn {
-  padding: 12px 26px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Tombol Utama (Lihat Projek) - Tetap Solid, Berubah Sedikit Gelap/Terang saat Hover */
-.btn-primary {
-  background-color: #0f172a;
-  color: #ffffff;
-  border: 1px solid #0f172a;
-}
-
-.btn-primary:hover {
-  background-color: #1e293b; /* Sedikit lebih abu-abu gelap tapi tetap solid */
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Tombol Sekunder (Hubungi Saya) - Outline, jadi Solid saat Hover */
-.btn-secondary {
-  background-color: transparent;
-  color: #0f172a;
-  border: 1px solid #0f172a;
-}
-
-.btn-secondary:hover {
-  background-color: #0f172a;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  min-width: 280px;
-}
-
-.hero-image img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--text-main);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* 1. Availability Badge & Pulsing Dot Animation */
+/* Availability Badge & Pulsing Dot */
 .availability-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Memastikan isi teks & dot di dalam badge posisinya di tengah */
-  margin: 0 auto; /* Memastikan kotaknya sendiri benar-benar di tengah secara horizontal */
+  justify-content: center;
+  margin: 0 auto;
   gap: 6px;
   background-color: #f0fdf4;
   color: #166534;
@@ -323,7 +197,7 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* 3. Tech Stack Pills Styles */
+/* Tech Stack Pills */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -350,7 +224,14 @@ body {
   transform: translateY(-1px);
 }
 
-/* 2. Quick Social Links Styles */
+/* Hero Buttons Wrapper */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* Quick Social Links */
 .hero-socials {
   display: flex;
   gap: 12px;
@@ -380,92 +261,115 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive untuk layar kecil/HP */
-@media (max-width: 768px) {
-  /* 1. Navbar: Paksa logo tetap satu baris dan rapikan menu di bawahnya */
-  .navbar {
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 12px 16px !important;
-    gap: 8px !important;
-  }
+/* ==========================================================================
+   6. BUTTON COMPONENTS
+   ========================================================================== */
+.btn {
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
 
-  .navbar > *:first-child,
-  .navbar a:first-child {
-    white-space: nowrap !important;
-    font-size: 1.1rem !important;
-  }
+.btn-primary {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+}
 
-  .nav-links {
-    display: flex !important;
-    gap: 12px !important;
-    font-size: 0.85rem !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-  }
+.btn-primary:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-  /* 2. Hero Container: Ubah jadi kolom dan posisikan foto ke paling atas */
-  .hero {
-    padding: 130px 16px 40px !important;
-    min-height: auto !important;
-  }
+.btn-secondary {
+  background-color: transparent;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+}
 
-  .hero-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
+.btn-secondary:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-  /* Pastikan foto ada di urutan pertama (paling atas) */
-  .hero-image {
-    order: 1 !important;
-    margin-bottom: 20px !important;
-  }
+.btn-outline {
+  background-color: transparent;
+  color: #000000 !important;
+  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-  /* Konten teks dan tombol ada di bawah foto */
-  .hero-content {
-    order: 2 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
+.btn-outline:hover {
+  background-color: #000000;
+  color: #ffffff !important;
+}
 
-  .hero-title {
-    font-size: 1.6rem !important;
-    text-align: center !important;
+/* ==========================================================================
+   7. ANIMATIONS
+   ========================================================================== */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
   }
-
-  .hero-subtitle,
-  .hero-description {
-    text-align: center !important;
-    font-size: 0.85rem !important;
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
   }
-
-  .tech-stack {
-    justify-content: center !important;
-  }
-
-  .hero-buttons {
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 10px !important;
-  }
-
-  .hero-buttons .btn {
-    width: 100% !important;
-    text-align: center !important;
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
   }
 }
 
+/* ==========================================================================
+   8. RESPONSIVE / MOBILE STYLES (max-width: 768px)
+   ========================================================================== */
+.nav-toggle-input {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
 @media (max-width: 768px) {
+  /* Navbar Mobile Dropdown */
   .hamburger {
     display: flex;
   }
 
-  /* Ubah nav-menu jadi dropdown absolute di bawah navbar */
+  .navbar {
+    padding: 12px 16px !important;
+  }
+
   .nav-menu {
     position: absolute;
     top: var(--nav-height);
@@ -485,7 +389,7 @@ body {
   }
 
   .nav-menu .nav-link,
-  .nav-menu .btn-cv {
+  .nav-menu .btn-outline {
     width: 100%;
     padding: 0.8rem 0;
     border-bottom: 1px solid var(--border-color);
@@ -496,14 +400,13 @@ body {
     margin-bottom: 0.5rem;
   }
 
-  /* Saat icon hamburger diklik (dropdown terbuka) */
+  /* Hamburger Toggle Checked State */
   .nav-toggle-input:checked ~ .nav-menu {
     max-height: 300px;
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--border-color);
   }
 
-  /* Animasi ikon hamburger berubah jadi tanda silang (X) */
   .nav-toggle-input:checked ~ .hamburger span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
@@ -513,40 +416,54 @@ body {
   .nav-toggle-input:checked ~ .hamburger span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-}
 
-@media (max-width: 768px) {
+  /* Hero Section Mobile Layout */
   .hero {
-    padding-top: 120px;
-    text-align: center;
+    padding: 120px 16px 40px !important;
+    min-height: auto !important;
+    height: auto !important;
   }
-  .hero-container {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-title {
-    font-size: 2.3rem;
-  }
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  .hero-container {
+    flex-direction: column-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
   }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+
+  .hero-image {
+    margin-top: 20px !important;
   }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+
+  .hero-content {
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+    text-align: center !important;
+  }
+
+  .hero-subtitle {
+    text-align: center !important;
+    font-size: 0.85rem !important;
+  }
+
+  .tech-stack {
+    justify-content: center !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+
+  .hero-buttons .btn {
+    width: 100% !important;
+    text-align: center !important;
   }
 }
