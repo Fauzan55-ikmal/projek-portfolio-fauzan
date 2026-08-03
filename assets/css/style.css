@@ -114,3 +114,191 @@ body {
   background-color: #000000;
   color: #ffffff !important;
 }
+
+/* =========================================
+   HERO SECTION STYLES (Polished & Balanced)
+   ========================================= */
+.hero {
+  padding: 100px 20px 60px;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.hero-image {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0f172a;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-greeting {
+  font-size: 1.1rem;
+  color: #475569;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   BUTTON STYLES (Fixed Hover)
+   ========================================= */
+.btn {
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tombol Utama (Lihat Projek) - Tetap Solid, Berubah Sedikit Gelap/Terang saat Hover */
+.btn-primary {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+}
+
+.btn-primary:hover {
+  background-color: #1e293b; /* Sedikit lebih abu-abu gelap tapi tetap solid */
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tombol Sekunder (Hubungi Saya) - Outline, jadi Solid saat Hover */
+.btn-secondary {
+  background-color: transparent;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+}
+
+.btn-secondary:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 280px;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--text-main);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive breakpoint untuk HP/Tablet kecil */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Responsive untuk layar kecil/HP */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
