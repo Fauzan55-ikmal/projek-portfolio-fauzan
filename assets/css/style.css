@@ -119,7 +119,7 @@ body {
    HERO SECTION STYLES (Centered Layout)
    ========================================= */
 .hero {
-  padding: 120px 20px 80px;
+  padding: 100px 20px 40px; /* Dikurangi padding atas dan bawahnya */
   background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
   background-size: 28px 28px;
   background-color: var(--bg-primary);
@@ -137,7 +137,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 16px; /* Merapatkan jarak antar elemen agar lebih compact */
   width: 100%;
 }
 
