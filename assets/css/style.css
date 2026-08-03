@@ -138,7 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px; /* Merapatkan jarak antar elemen */
+  gap: 14px; /* Jarak proporsional antar elemen */
   width: 100%;
 }
 
@@ -161,8 +161,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  width: 100%;
+  gap: 16px; /* Ini pengatur jarak vertikal antar elemen supaya rapi ke bawah */
+}
+
+.hero-content h1,
+.hero-content p {
+  margin: 0; /* Hapus margin bawaan browser biar nggak saling dorong */
 }
 
 .hero-greeting-badge {
@@ -178,19 +182,17 @@ body {
 }
 
 .hero-title {
-  font-size: 2.8rem;
-  margin: 0 0 10px 0;
+  font-size: 2.3rem;
   font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -1px;
-  line-height: 1.15;
+  margin-bottom: 0px;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #475569;
-  margin-bottom: 15px;
-  font-weight: 600;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .hero-subtitle .separator {
@@ -209,9 +211,8 @@ body {
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
 }
 
 /* =========================================
@@ -271,40 +272,19 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive breakpoint untuk HP/Tablet kecil */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 120px;
-    text-align: center;
-  }
-  .hero-container {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-title {
-    font-size: 2.3rem;
-  }
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /* 1. Availability Badge & Pulsing Dot Animation */
 .availability-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center; /* Memastikan isi teks & dot di dalam badge posisinya di tengah */
+  margin: 0 auto; /* Memastikan kotaknya sendiri benar-benar di tengah secara horizontal */
+  gap: 6px;
   background-color: #f0fdf4;
   color: #166534;
-  padding: 6px 14px;
+  padding: 4px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  margin-bottom: 15px;
   border: 1px solid #bbf7d0;
 }
 
@@ -318,28 +298,13 @@ body {
   animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-  }
-}
-
 /* 3. Tech Stack Pills Styles */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
-  margin-bottom: 25px;
+  margin: 4px 0 10px;
 }
 
 .tech-pill {
@@ -365,7 +330,7 @@ body {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .hero-socials a {
@@ -416,5 +381,41 @@ body {
   .hero-image img {
     width: 220px;
     height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+    text-align: center;
+  }
+  .hero-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
   }
 }
