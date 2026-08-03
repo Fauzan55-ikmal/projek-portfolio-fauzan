@@ -1,0 +1,47 @@
+🧠 Brainstorming & Ideation: Portofolio Pribadi
+1. Peran & Vibe (Persona Lu)
+Portofolio ini mau memancarkan impresi kayak gimana ke recruiter atau klien?
+Gaya: Modern, Clean, Minimalist (Gak banyak warna mencolok, fokus ke keterbacaan & kerapihan UI).
+Tema Visual:
+Dark Mode (Serba gelap, elegan, terkesan hacker/developer banget), ATAU
+Light Mode Modern (Serba putih/abu-abu terang, bersih ala web SaaS/startup).
+Hero Tagline: Langsung to the point menjelaskan siapa lu dan apa yang bisa lu bikin (misal: "Frontend Developer yang hobi slicing UI pixel-perfect").
+
+2. Arsitektur Komponen (5 Section Utama)
+Sesuai hirarki visual web dev profesional, kita bagi jadi 5 blok komponen:
+
+Plaintext
+PORTOFOLIO SITE/
+├── 1. Navbar           --> Logo/Nama + Navigasi Cepat + Button Switch Theme/CV
+├── 2. Hero Section     --> Sapaan + Tagline + Call to Action (CTA) Utama
+├── 3. About & Tech     --> Ringkasan singkat + Icon Tech Stack yang dikuasai
+├── 4. Projects Showcase--> Kartu Projek (Highlight: Tokopedia Clone!)
+└── 5. Contact & Footer --> Akses LinkedIn, GitHub, Email, & Copyright
+
+3. Bedah Isi Tiap Blok (Peta Ide)
+📍 Blok 1: Navbar (Navigasi Ringkas)
+Kiri: Brand/Nama Lu (misal: Fauzan.dev atau <Fauzan/>).
+Kanan: Link halus ke #about, #projects, #contact, plus 1 tombol khusus (misal: Download CV atau tombol ganti tema).
+
+📍 Blok 2: Hero Section (Kesan Pertama)
+Teks besar pemikat: Sapaan hangat + nama + posisi/keahlian lu.
+Deskripsi 1–2 kalimat yang ngejelasin passion lu di dunia coding/web development.
+2 Tombol Aksi (CTA):
+Tombol Utama: "Lihat Projek" (Otomatis scroll ke section projek).
+Tombol Sekunder: "Hubungi Saya" (Langsung ngebuka email/LinkedIn).
+
+📍 Blok 3: About & Tech Stack (Nilai Plus Lu)
+About: Cerita singkat tentang perjalanan lu belajar coding, cara berpikir lu (seperti metode slicing UI terstruktur), dan fokus lu saat ini.
+Tech Stack Badges: Tampilkan skill lu bukan pake persentase ($80\%$, $90\%$ — ini sering dihindari senior dev), tapi pake Badge Icon bersih:HTML5, CSS3, JavaScript (ES6+), Git & GitHub, Responsive Web Design, Flexbox & CSS Grid.
+
+📍 Blok 4: Projects Showcase (Panggung Utama Tokopedia Clone!)
+Ini bagian paling vital! Tiap kartu projek (Project Card) akan punya struktur:
+Gambar Mockup/Screenshot: Screenshot Tokopedia Clone yang lu buat kemarin.
+Judul & Tag: "Tokopedia Home Page Clone" | HTML CSS JavaScript.
+Deskripsi Singkat: Penjelasan bahwa projek ini dibangun dengan pendekatan pixel-perfect, struktur HTML semantik, dan layouting terisolasi.
+Tombol Akses: Link ke Live Demo & Link ke GitHub Repository.
+
+📍 Blok 5: Contact & Footer (Penutup)
+Teks ajakan: "Punya ide menarik atau mau diskusi projek? Yuk ngobrol!"
+Icon sosial media: GitHub, LinkedIn, Email, Instagram.
+Bottom copyright.
