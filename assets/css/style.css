@@ -62,6 +62,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 1000;
+  transition: box-shadow 0.3s ease; /* Tambahan transisi smooth */
 }
 
 .nav-container {
