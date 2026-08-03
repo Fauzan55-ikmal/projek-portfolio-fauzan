@@ -5,10 +5,10 @@
    1. DESIGN TOKENS
    ========================================== */
 :root {
-  --bg-primary: #ffffff;
-  --bg-glass: rgba(224, 242, 254, 0.9); /* Navbar biru muda */
-  --text-main: #000000; /* Semua teks jadi hitam */
-  --border-color: #cbd5e1;
+  --bg-primary: #ffffff; /* Background utama putih */
+  --bg-navbar: #f8fafc; /* Navbar putih keabuan tipis agar kontras dengan body */
+  --text-main: #000000; /* Hitam pekat mutlak */
+  --border-color: #e2e8f0; /* Garis border tipis yang elegan */
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --container-max: 1100px;
@@ -53,8 +53,7 @@ body {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background-color: var(--bg-glass);
-  backdrop-filter: blur(10px);
+  background-color: var(--bg-navbar);
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
@@ -95,13 +94,14 @@ body {
 }
 
 .nav-link:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
+/* Tombol Resume */
 .btn-outline {
   background-color: transparent;
-  color: var(--text-main);
-  border: 1px solid var(--text-main);
+  color: #000000 !important; /* Paksa hitam pekat */
+  border: 1px solid #000000;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -111,6 +111,6 @@ body {
 }
 
 .btn-outline:hover {
-  background-color: var(--text-main);
-  color: var(--bg-primary);
+  background-color: #000000;
+  color: #ffffff !important;
 }
