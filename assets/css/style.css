@@ -119,12 +119,13 @@ body {
    HERO SECTION STYLES (Centered Layout)
    ========================================= */
 .hero {
-  padding: 100px 20px 40px; /* Dikurangi padding atas dan bawahnya */
+  padding: 80px 20px 20px; /* Memangkas padding agar lebih compact */
   background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
   background-size: 28px 28px;
   background-color: var(--bg-primary);
   color: var(--text-main);
-  min-height: 100vh;
+  height: 100vh; /* Menggunakan height 100vh agar pas satu layar */
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px; /* Merapatkan jarak antar elemen agar lebih compact */
+  gap: 12px; /* Merapatkan jarak antar elemen */
   width: 100%;
 }
 
@@ -148,12 +149,12 @@ body {
 }
 
 .hero-image img {
-  width: 220px;
-  height: 220px;
+  width: 170px; /* Sedikit diperkecil dari 220px agar proporsional */
+  height: 170px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #0f172a;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
