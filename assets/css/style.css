@@ -827,7 +827,7 @@ body {
 .projects-swiper {
   max-width: 680px;
   margin: 1.5rem auto 0 auto;
-  padding: 0.5rem 3.5rem 3rem 3.5rem; /* Tambah padding samping agar panah tidak nabrak konten */
+  padding: 0 0 3rem 0; /* Hapus padding samping biar card murni di tengah */
   position: relative;
 }
 
@@ -951,10 +951,12 @@ body {
 .swiper-button-prev {
   color: #1f2937;
   transform: scale(0.65);
+  top: 45%; /* Posisi vertikal sejajar tengah card */
 }
 
 .swiper-button-prev {
   left: 0.5rem;
+  right: -45px; /* Geser keluar ke kanan card */
 }
 
 .swiper-button-next {
@@ -972,5 +974,11 @@ body {
   }
   .section-header p {
     font-size: 0.9rem;
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+  .swiper-button-next {
+    right: 10px;
   }
 }
