@@ -468,3 +468,190 @@ body {
     text-align: center !important;
   }
 }
+
+/* belum di rapihkan */
+/* ================= ABOUT & TECH STACK SECTION ================= */
+.about-section {
+  padding: 50px 0; /* Dikurangi dari 80px agar tidak terlalu panjang ke bawah */
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr; /* Membagi dua kolom sama rata */
+    align-items: start;
+  }
+}
+
+/* Cards Base Style */
+.bio-card,
+.education-card,
+.tech-stack-container {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.bio-card {
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.bio-card p {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.925rem;
+}
+
+.bio-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Education Timeline */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  padding-left: 12px;
+  border-left: 2px solid #e2e8f0;
+  margin-left: 8px;
+  margin-top: 12px;
+}
+
+.edu-item {
+  position: relative;
+  padding-left: 16px;
+}
+
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0f172a;
+}
+
+.edu-badge {
+  display: inline-block;
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.edu-degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.edu-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Tech Stack Badges */
+.tech-group {
+  margin-bottom: 18px;
+}
+
+.tech-group:last-child {
+  margin-bottom: 0;
+}
+
+.tech-group-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease-in-out;
+}
+
+.badge-item:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.badge-item img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.text-icon {
+  font-size: 14px;
+  line-height: 1;
+}
