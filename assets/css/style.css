@@ -315,10 +315,11 @@ body {
   scroll-margin-top: 20px;
 }
 
+/* Grid Layout Default (Mobile First = 1 Kolom) */
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr; /* Default 1 kolom untuk HP/Tablet */
+  gap: 20px;
   align-items: stretch;
 }
 
@@ -614,9 +615,13 @@ body {
 /* ==========================================================================
    8. MEDIA QUERIES (RESPONSIVE)
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop & Wide Screen Layout (≥ 992px)
+   -------------------------------------------------------------------------- */
 @media (min-width: 992px) {
   .about-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: start;
   }
 
@@ -625,7 +630,11 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+/* --------------------------------------------------------------------------
+   Mobile & Tablet Layout (< 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  /* Navbar Mobile Component */
   .hamburger {
     display: flex;
   }
@@ -682,14 +691,15 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  /* Hero Section Mobile / Tablet Layout */
   .hero {
-    padding: 120px 16px 40px !important;
-    min-height: auto !important;
+    padding: 100px 16px 40px !important;
     height: auto !important;
+    min-height: 100vh;
   }
 
   .hero-container {
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
@@ -697,7 +707,8 @@ body {
   }
 
   .hero-image {
-    margin-top: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
   }
 
   .hero-content {
@@ -720,14 +731,56 @@ body {
   }
 
   .hero-buttons {
-    flex-direction: column !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
     width: 100% !important;
     gap: 10px !important;
     justify-content: center !important;
   }
 
   .hero-buttons .btn {
-    width: 100% !important;
+    flex: 1;
+    min-width: 140px;
     text-align: center !important;
+  }
+
+  /* About Section Responsive Adjustments */
+  .about-section {
+    padding: 60px 0 30px 0;
+  }
+
+  .bio-card,
+  .education-card,
+  .tech-stack-container,
+  .soft-skills-card {
+    padding: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .bio-card p {
+    text-align: left; /* Teks gak berjarak aneh gara-gara justify di HP */
+  }
+
+  .education-timeline {
+    padding-left: 15px;
+    margin-left: 5px;
+  }
+
+  .edu-item::before {
+    left: -20px; /* Posisi titik timeline disesuaikan */
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Extra Small Screen / Mobile Portrait (≤ 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column !important;
+  }
+
+  .hero-buttons .btn {
+    width: 100% !important;
   }
 }
