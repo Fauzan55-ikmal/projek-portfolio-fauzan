@@ -790,7 +790,14 @@ body {
 /* STYLING PROJECTS SHOWCASE CAROUSEL (1 CARD)*/
 /* ========================================== */
 #projects {
-  scroll-margin-top: 90px;
+  /* Diperbesar nilainya biar area atas terdorong pas di bawah navbar */
+  scroll-margin-top: 10px;
+  min-height: 80vh; /* Memastikan section projects punya ruang yang cukup tinggi di layar */
+}
+
+.projects-section {
+  padding-top: 2rem;
+  padding-bottom: 11rem;
 }
 
 /* Container Carousel Swiper - Ditingkatkan ke 680px biar makin tegas */
