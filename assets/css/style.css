@@ -816,7 +816,7 @@ body {
 .section-header p {
   font-size: 1rem; /* Ukuran p disamakan */
   color: #6b7280;
-  max-width: 650px; /* Supaya teks deskripsi tidak terlalu lebar ke samping */
+  max-width: 850px; /* Supaya teks deskripsi tidak terlalu lebar ke samping */
   margin: 0 auto;
   line-height: 1.5;
 }
