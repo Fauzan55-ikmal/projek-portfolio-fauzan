@@ -311,8 +311,8 @@ body {
    ========================================================================== */
 .about-section {
   background-color: transparent;
-  padding: 85px 0 50px 0;
-  scroll-margin-top: 20px;
+  padding: 25px 0 50px 0; /* Dikurangi dari 85px jadi 25px biar rapat */
+  scroll-margin-top: 70px; /* Dinaikkan biar pas mendarat di bawah navbar */
 }
 
 /* Grid Layout Default (Mobile First = 1 Kolom) */
@@ -793,9 +793,11 @@ body {
   scroll-margin-top: 80px;
 }
 
+/* Rapikan spacing Projects agar tidak merusak layout section About */
 .projects-section {
-  margin-top: 2rem; /* Dorong fisik section projects menjauh dari About */
-  padding-bottom: 6rem;
+  margin-top: 5rem; /* Diturunkan dari 5rem agar tidak terlalu mendorong ke atas */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 .section-header {
   text-align: center;
