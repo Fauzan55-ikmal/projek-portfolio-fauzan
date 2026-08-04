@@ -478,8 +478,8 @@ body {
 /* ================= ABOUT & TECH STACK SECTION ================= */
 .about-section {
   background-color: transparent;
-  padding: 90px 0 50px 0; /* Padding atas ditambah jadi 100px agar turun dari navbar */
-  scroll-margin-top: 30px; /* Biar pas diklik menu "About" di navbar, posisinya gak kepotong */
+  padding: 85px 0 50px 0; /* Padding atas ditambah jadi 100px agar turun dari navbar */
+  scroll-margin-top: 20px; /* Biar pas diklik menu "About" di navbar, posisinya gak kepotong */
 }
 
 /* Section Header */

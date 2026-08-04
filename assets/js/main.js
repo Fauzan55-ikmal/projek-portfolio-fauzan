@@ -18,3 +18,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// about-section
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".bio-card, .education-card, .tech-stack-container, .soft-skills-card");
+
+  // Fungsi untuk memicu/menjalankan animasi card
+  const animateCards = () => {
+    cards.forEach((card, index) => {
+      // Reset dulu biar bisa di-replay saat nav diklik
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "all 0.5s ease-out";
+
+      // Trigger animasi beruntun (staggered effect)
+      setTimeout(() => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, index * 120);
+    });
+  };
+
+  // 1. Jalankan animasi pakai Intersection Observer saat scroll biasa
+  const observerOptions = { threshold: 0.1 };
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCards();
+        cardObserver.disconnect(); // Matikan observer setelah sekali trigger scroll
+      }
+    });
+  }, observerOptions);
+
+  const aboutSection = document.querySelector("#about") || document.querySelector(".about-section");
+  if (aboutSection) cardObserver.observe(aboutSection);
+
+  // 2. TRIGGER LAGI KETIKA MENU NAVBAR "ABOUT" DIKLIK
+  const aboutNavLinks = document.querySelectorAll('a[href*="#about"]');
+  aboutNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      // Kasih delay tipis 200ms biar pas layar bergeser ke section, animasinya baru main
+      setTimeout(() => {
+        animateCards();
+      }, 500);
+    });
+  });
+});
