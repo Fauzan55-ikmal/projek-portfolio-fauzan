@@ -92,3 +92,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// js section projeck
+document.addEventListener("DOMContentLoaded", function () {
+  // Inisialisasi Carousel Projects Showcase (Tampilan 1 Card)
+  const projectsSwiper = new Swiper(".projects-swiper", {
+    slidesPerView: 1 /* Menampilkan 1 card utama saja */,
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
