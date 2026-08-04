@@ -550,32 +550,38 @@ body {
   margin-bottom: 0;
 }
 
-/* Education Timeline */
+/* Container timeline & garis vertical */
 .education-timeline {
   display: flex;
   flex-direction: column;
   gap: 24px;
   position: relative;
-  padding-left: 12px;
-  border-left: 2px solid #e2e8f0;
-  margin-left: 8px;
-  margin-top: 12px;
+  padding-left: 20px;
+  border-left: 2px solid #e2e8f0; /* Lebar garis 2px */
+  margin-left: 10px;
+  margin-top: 16px;
 }
 
-.edu-item {
-  position: relative;
-  padding-left: 16px;
-}
-
+/* Titik timeline default (Presisi Center 100%) */
 .edu-item::before {
   content: "";
   position: absolute;
-  left: -23px;
+  /* Posisi rumusnya: -padding-left (20px) - (lebar garis (2px) / 2) - (lebar titik (10px) / 2) = -25px */
+  left: -25px;
   top: 6px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #0f172a;
+  background-color: #64748b; /* Abu-abu netral untuk alumni/lampau */
+  border: 2px solid #ffffff; /* Border putih tipis biar makin rapi */
+  box-sizing: border-box;
+}
+
+/* Khusus titik Education yang "Active Student" (Hijau Selevel Badge) */
+.edu-item:has(.edu-badge)::before,
+.edu-item.active::before {
+  background-color: #22c55e; /* Hijau segar sama dengan pulsing dot/badge */
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); /* Efek glow lembut khas active state */
 }
 
 .edu-badge {
