@@ -789,6 +789,9 @@ body {
 /* ========================================== */
 /* STYLING PROJECTS SHOWCASE SECTION          */
 /* ========================================== */
+#projects {
+  scroll-margin-top: 90px; /* Memberikan jarak aman setinggi navbar saat di-klik */
+}
 
 /* Styling Utama Grid Projects */
 .projects-grid {
