@@ -503,8 +503,9 @@ body {
 /* Grid Layout */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  align-items: stretch; /* Memaksa semua item di baris yang sama punya tinggi sejajar */
 }
 
 @media (min-width: 992px) {
@@ -521,8 +522,12 @@ body {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 21px 22px; /* Padding card diperkecil dari 24px */
+  padding: 18px 22px; /* Padding card diperkecil dari 24px */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.education-card {
+  padding-bottom: 40px;
 }
 
 .bio-card {
