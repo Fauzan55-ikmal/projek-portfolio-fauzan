@@ -860,7 +860,7 @@ body {
 /* Pembungkus Gambar - Tingginya Ditingkatkan */
 .project-img-wrapper {
   width: 100%;
-  height: 220px;
+  height: 280px; /* Bikin area screenshot proyek lebih lega & jelas */
   background-color: #f8fafc;
   position: relative;
   overflow: hidden;
@@ -881,7 +881,7 @@ body {
 
 /* Konten Card */
 .project-content {
-  padding: 1.5rem;
+  padding: 1.75rem; /* Menambah ruang di dalam card */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -892,6 +892,15 @@ body {
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 0.5rem;
+}
+
+/* Deskripsi Proyek - Bikin baris teks lebih lega */
+.project-content p {
+  font-size: 0.925rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 /* Tag Tech Stack */
