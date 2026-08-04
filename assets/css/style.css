@@ -28,10 +28,9 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  color: var(--text-main);
-  line-height: 1.6;
+  background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
 }
 
 /* ==========================================================================
@@ -101,9 +100,7 @@ body {
    ========================================================================== */
 .hero {
   padding: 80px 20px 20px;
-  background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
-  background-size: 28px 28px;
-  background-color: var(--bg-primary);
+  background: transparent; /* Ubah ke transparent */
   color: var(--text-main);
   height: 100vh;
   box-sizing: border-box;
@@ -469,9 +466,18 @@ body {
   }
 }
 
+/* Buat semua section transparan agar pola dot grid di body selalu kelihatan */
+.hero,
+.about-section,
+.projects-section,
+.contact-section {
+  background: transparent !important;
+}
+
 /* belum di rapihkan */
 /* ================= ABOUT & TECH STACK SECTION ================= */
 .about-section {
+  background-color: transparent;
   padding: 80px 0 50px 0; /* Padding atas ditambah jadi 100px agar turun dari navbar */
   scroll-margin-top: 25px; /* Biar pas diklik menu "About" di navbar, posisinya gak kepotong */
 }
