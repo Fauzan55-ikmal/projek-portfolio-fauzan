@@ -12,6 +12,10 @@
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --container-max: 1100px;
   --nav-height: 70px;
+  /* Definisikan warna di root biar konsisten */
+  --github-hover-bg: #1a202c; /* Navy tua solid */
+  --github-hover-text: #ffffff; /* Putih bersih */
+  --github-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15); /* Bayangan kuat tapi halus */
 }
 
 * {
@@ -944,14 +948,37 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.btn-secondary {
-  background-color: #f3f4f6;
-  color: #1f2937;
-  border: 1px solid #d1d5db;
+/* Base style tombol GitHub sebelum disorot */
+.btn-github {
+  /* Style visual bawaan (background abu terang seperti di image 8) */
+  background-color: #f1f3f5;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  /* --- INI KUNCINYA AGAR HALUS --- */
+  /* Transition transparan agar tidak patah-patah */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Persiapan transform agar tidak goyang saat hover */
+  transform: scale(1);
 }
 
-.btn-secondary:hover {
-  background-color: #e5e7eb;
+/* Style tombol GitHub SAAT DISOROT (HOVER) */
+.btn-github:hover {
+  /* 1 & 2. Ganti warna background dan teks */
+  background-color: var(--github-hover-bg);
+  color: var(--github-hover-text);
+  border-color: var(--github-hover-bg); /* Biar border ikut gelap */
+
+  /* 3. Perubahan Ukuran (Zoom-in) */
+  transform: scale(1.05); /* Membesar 5% */
+
+  /* 4. Tambahkan Bayangan (Float effect) */
+  box-shadow: var(--github-shadow);
 }
 
 /* Posisi Tombol Panah Biar Berada Di Luar Card */
