@@ -518,7 +518,8 @@ body {
 /* Cards Base Style */
 .bio-card,
 .education-card,
-.tech-stack-container {
+.tech-stack-container,
+.soft-skills-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
@@ -527,7 +528,12 @@ body {
 }
 
 .education-card {
-  padding-bottom: 40px;
+  padding-bottom: 49px;
+}
+
+.soft-skills-card {
+  margin-top: 24px;
+  padding-bottom: 32px;
 }
 
 .bio-card {
@@ -546,7 +552,7 @@ body {
 .bio-card p {
   color: #475569;
   line-height: 1.6;
-  margin-bottom: 5px; /* Gap paragraf diperkecil */
+  margin-bottom: 12px; /* Gap paragraf diperkecil */
   font-size: 0.925rem;
   text-align: justify; /* Menjadikan teks paragraf rata kiri-kanan */
 }
@@ -597,14 +603,14 @@ body {
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .edu-degree {
   font-size: 0.95rem;
   font-weight: 600;
   color: #1e293b;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   line-height: 1.4;
 }
 
@@ -680,4 +686,57 @@ body {
   .tech-stack-container {
     grid-column: 1 / -1; /* Melebar penuh dari kolom kiri sampai kanan */
   }
+}
+
+/* Soft Skills Grouping & Styling */
+.skills-group {
+  margin-bottom: 14px;
+}
+
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-group-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  font-size: 0.9rem;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e; /* Disesuaikan dengan warna titik active di Education */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.focus-text {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  text-align: justify;
+}
+
+.focus-text:last-child {
+  margin-bottom: 0;
 }
