@@ -177,6 +177,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  margin-top: 12px;
   gap: 6px;
   background-color: #f0fdf4;
   color: #166534;
@@ -243,8 +244,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
   background-color: #ffffff;
   color: #334155;
