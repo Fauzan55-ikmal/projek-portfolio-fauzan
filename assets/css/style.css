@@ -472,7 +472,8 @@ body {
 /* belum di rapihkan */
 /* ================= ABOUT & TECH STACK SECTION ================= */
 .about-section {
-  padding: 50px 0; /* Dikurangi dari 80px agar tidak terlalu panjang ke bawah */
+  padding: 80px 0 50px 0; /* Padding atas ditambah jadi 100px agar turun dari navbar */
+  scroll-margin-top: 25px; /* Biar pas diklik menu "About" di navbar, posisinya gak kepotong */
 }
 
 /* Section Header */
