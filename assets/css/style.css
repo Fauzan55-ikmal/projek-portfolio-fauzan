@@ -791,13 +791,36 @@ body {
 /* ========================================== */
 #projects {
   /* Diperbesar nilainya biar area atas terdorong pas di bawah navbar */
-  scroll-margin-top: 10px;
+  scroll-margin-top: 60px;
   min-height: 80vh; /* Memastikan section projects punya ruang yang cukup tinggi di layar */
 }
 
 .projects-section {
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 11rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Judul Section (About Me & Projects Showcase) */
+.section-header h2 {
+  font-size: 2.25rem; /* Ukuran h2 disamakan */
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+/* Deskripsi di bawah Judul */
+.section-header p {
+  font-size: 1rem; /* Ukuran p disamakan */
+  color: #6b7280;
+  max-width: 650px; /* Supaya teks deskripsi tidak terlalu lebar ke samping */
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 /* Container Carousel Swiper - Ditingkatkan ke 680px biar makin tegas */
@@ -940,4 +963,14 @@ body {
 
 .swiper-pagination-bullet-active {
   background: #1f2937;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  .section-header p {
+    font-size: 0.9rem;
+  }
 }
