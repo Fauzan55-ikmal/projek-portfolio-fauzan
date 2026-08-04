@@ -794,13 +794,12 @@ body {
 }
 
 .projects-section {
-  margin-top: 5rem; /* Dorong fisik section projects menjauh dari About */
-  padding-top: 1rem;
-  padding-bottom: 4rem;
+  margin-top: 2rem; /* Dorong fisik section projects menjauh dari About */
+  padding-bottom: 6rem;
 }
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 /* Judul Section (About Me & Projects Showcase) */
@@ -954,9 +953,9 @@ body {
 }
 
 /* Posisi Tombol Panah Biar Berada Di Luar Card */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #1f2937;
+.projects-swiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after {
+  color: #475569 !important; /* Warna titik tengah Education */
   transform: scale(0.65);
   top: 45%; /* Posisi vertikal sejajar tengah card */
 }
@@ -970,8 +969,15 @@ body {
   right: 0.5rem;
 }
 
-.swiper-pagination-bullet-active {
-  background: #1f2937;
+/* Pagination Bullet Aktif - Slate Dark */
+.projects-swiper .swiper-pagination-bullet-active {
+  background-color: #475569 !important;
+}
+
+/* Pagination Bullet Tidak Aktif */
+.projects-swiper .swiper-pagination-bullet {
+  background-color: #cbd5e1;
+  opacity: 1;
 }
 
 /* Responsif untuk HP */
