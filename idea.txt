@@ -219,3 +219,9 @@ Saran & Rekomendasi:
 Untuk tahap awal, pendekatan Widget No-Code jauh lebih ideal biar lo gak pusing mikirin serverless backend atau biaya API Key. Nanti kalau struktur dasar portofolio (Contact, Dark Mode, Multi-Bahasa) udah selesai di-publish, fitur AI ini bisa ditambahin belakangan sebagai nilai plus!
 
 
+<!-- ================= FOOTER SECTION ================= -->
+    <footer class="main-footer">
+      <p>&copy; 2026 Fauzan. All rights reserved.</p>
+    </footer>
+    <!-- ================= END FOOTER SECTION ================= -->
+
