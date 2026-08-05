@@ -1025,7 +1025,7 @@ body {
   }
 }
 
-/* ================= CONTACT SECTION ================= */
+/* ================= CONTACT SECTION (HOVER ICON STYLE) ================= */
 .contact-section {
   padding: 80px 20px;
   max-width: 700px;
@@ -1053,7 +1053,6 @@ body {
   margin-bottom: 32px;
 }
 
-/* Card Wrapper Biar Rapi & Modern */
 .contact-info-list {
   background: #ffffff;
   border-radius: 16px;
@@ -1075,22 +1074,22 @@ body {
   color: #334155;
 }
 
-/* Icon Styling - Kontras & Jelas */
+/* Base Icon (State Normal: Outline Transparan) */
 .contact-item i {
-  width: 42px;
-  height: 42px;
-  background-color: #f1f5f9;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #e2e8f0; /* Border garis halus */
+  border-radius: 50%; /* Bikin bentuk bulat sempurna */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563eb; /* Warna biru icon */
-  font-size: 1.2rem;
+  color: #0f172a;
+  font-size: 1.1rem;
   flex-shrink: 0;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Link Styling */
 .contact-item a,
 .contact-item span {
   color: #1e293b;
@@ -1100,12 +1099,14 @@ body {
 }
 
 .contact-item a:hover {
-  color: #2563eb;
+  color: #0f172a;
 }
 
-/* Hover Effect saat Baris Disentuh */
+/* Hover State: Icon Box Berubah Hitam Solid & Teks Bawahnya Ikut Respon */
 .contact-item:hover i {
-  transform: translateY(-2px);
-  background-color: #2563eb;
+  background-color: #0f172a;
   color: #ffffff;
+  border-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.15);
 }
