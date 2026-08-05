@@ -1163,13 +1163,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #e2e8f0;
+  /* border-top: 1px solid #e2e8f0; */
   box-sizing: border-box;
 }
 
 .main-footer p {
   font-family: "Georgia", serif;
   font-size: 0.85rem;
-  color: #64748b;
+  color: #0f172a;
   margin: 0;
 }
