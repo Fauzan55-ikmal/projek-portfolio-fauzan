@@ -224,8 +224,13 @@ body {
   height: 280px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(--border-color);
+  border: 4px solid var(--text-dark);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.3s ease; /* Tambahin transisi biar smooth */
+}
+
+.hero-image img:hover {
+  border-color: var(--border-color); /* Berubah warna pas kursor di atas foto */
 }
 
 .hero-content {
