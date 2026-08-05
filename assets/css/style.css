@@ -1025,91 +1025,132 @@ body {
   }
 }
 
-/* ================= CONTACT SECTION (HOVER ICON STYLE) ================= */
+/* ================= REVAMPED CONTACT SECTION ================= */
 .contact-section {
   padding: 80px 20px;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-  text-align: center; /* Memastikan semua header & isi ke tengah */
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .contact-title {
-  font-family: "Georgia", "Times New Roman", serif; /* Font serif sesuai About Me */
-  font-size: 2rem;
-  font-weight: 800;
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #0f172a;
-  letter-spacing: 1.5px;
+  letter-spacing: -0.5px;
   margin-bottom: 8px;
 }
 
 .contact-subtitle {
-  font-family: "Georgia", "Times New Roman", serif; /* Font serif halus */
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
   color: #64748b;
-  font-size: 1rem;
-  margin-bottom: 32px;
 }
 
-.contact-info-list {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow:
-    0 10px 25px -5px rgba(0, 0, 0, 0.05),
-    0 8px 10px -6px rgba(0, 0, 0, 0.01);
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+/* Grid Layout 2 Kolom */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.contact-item {
+/* Interactive Card Style */
+.contact-card {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 0.95rem;
-  color: #334155;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  position: relative;
 }
 
-/* Base Icon (State Normal: Outline Transparan) */
-.contact-item i {
-  width: 44px;
-  height: 44px;
-  background-color: transparent;
-  border: 1px solid #e2e8f0; /* Border garis halus */
-  border-radius: 50%; /* Bikin bentuk bulat sempurna */
+/* Icon Container Bulat */
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #0f172a;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
   flex-shrink: 0;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-item a,
-.contact-item span {
-  color: #1e293b;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
+/* Info Text Styling */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
 }
 
-.contact-item a:hover {
+.card-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.card-value {
+  font-size: 0.95rem;
   color: #0f172a;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-/* Hover State: Icon Box Berubah Hitam Solid & Teks Bawahnya Ikut Respon */
-.contact-item:hover i {
+.card-arrow {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  opacity: 0;
+  transform: translate(-5px, 5px);
+  transition: all 0.3s ease;
+}
+
+/* Hover State Elegan (Hover Card-nya langsung) */
+.contact-card:hover {
   background-color: #0f172a;
-  color: #ffffff;
   border-color: #0f172a;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.25);
+}
+
+.contact-card:hover .card-icon {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+.contact-card:hover .card-label {
+  color: #94a3b8;
+}
+
+.contact-card:hover .card-value {
+  color: #ffffff;
+}
+
+.contact-card:hover .card-arrow {
+  opacity: 1;
+  color: #ffffff;
+  transform: translate(0, 0);
+}
+
+/* Responsive Mobile */
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
