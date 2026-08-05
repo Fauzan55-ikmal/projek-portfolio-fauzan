@@ -115,3 +115,23 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+// Function untuk copy text ke clipboard dengan tooltip/alert simpel
+document.querySelectorAll(".contact-item").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    // Jalankan efek salin jika element punya attribute data-copy
+    const copyText = item.getAttribute("data-copy");
+    if (copyText) {
+      navigator.clipboard.writeText(copyText);
+
+      // Feedback visual simpel
+      const originalText = item.querySelector("a, span").innerText;
+      const targetElement = item.querySelector("a, span");
+
+      targetElement.innerText = "Tersalin!";
+      setTimeout(() => {
+        targetElement.innerText = originalText;
+      }, 1500);
+    }
+  });
+});
