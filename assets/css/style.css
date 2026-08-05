@@ -1027,7 +1027,7 @@ body {
   padding: 70px 20px 80px 20px; /* Tambah padding atas lebih banyak */
   max-width: 900px;
   margin: 0 auto;
-  min-height: 100vh; /* Memaksa section berukuran minimal setinggi 1 layar penuh */
+  min-height: calc(100vh - 60px); /* Memperhitungkan space untuk footer */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Menempatkan grid persis di tengah vertikal */
@@ -1155,4 +1155,21 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ================= FOOTER STYLING ================= */
+.main-footer {
+  height: 60px; /* Set tinggi pasti footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.main-footer p {
+  font-family: "Georgia", serif;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
 }
