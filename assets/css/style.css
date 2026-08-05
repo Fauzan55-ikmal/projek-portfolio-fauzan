@@ -1037,9 +1037,11 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
+  text-align: center; /* Memastikan semua header & isi ke tengah */
 }
 
 .contact-title {
+  font-family: "Georgia", "Times New Roman", serif; /* Font serif sesuai About Me */
   font-size: 2rem;
   font-weight: 800;
   color: #0f172a;
@@ -1048,6 +1050,7 @@ body {
 }
 
 .contact-subtitle {
+  font-family: "Georgia", "Times New Roman", serif; /* Font serif halus */
   color: #64748b;
   font-size: 1rem;
   margin-bottom: 32px;
