@@ -4,18 +4,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg-primary: #ffffff; /* Background utama putih */
-  --bg-navbar: #f8fafc; /* Navbar putih keabuan tipis */
-  --text-main: #000000; /* Hitam pekat mutlak */
-  --border-color: #e2e8f0; /* Garis border tipis yang elegan */
+  --bg-primary: #ffffff;
+  --bg-navbar: #f8fafc;
+  --text-main: #000000;
+  --border-color: #e2e8f0;
 
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --container-max: 1100px;
   --nav-height: 70px;
-  /* Definisikan warna di root biar konsisten */
-  --github-hover-bg: #1a202c; /* Navy tua solid */
-  --github-hover-text: #ffffff; /* Putih bersih */
-  --github-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15); /* Bayangan kuat tapi halus */
+
+  --github-hover-bg: #1a202c;
+  --github-hover-text: #ffffff;
+  --github-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -53,19 +53,26 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 3.5rem;
 }
 
+.section-header h2,
 .section-title {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 8px;
+  color: #1f2937;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
 }
 
+.section-header p,
 .section-subtitle {
-  font-size: 0.95rem;
-  color: #64748b;
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -75,24 +82,24 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: var(--nav-height);
   background-color: var(--bg-navbar);
   border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  z-index: 1000;
   transition: box-shadow 0.3s ease;
+  z-index: 1000;
 }
 
 .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .nav-logo {
@@ -110,10 +117,10 @@ body {
 }
 
 .nav-link {
-  color: var(--text-main);
-  text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
+  color: var(--text-main);
+  text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
@@ -127,17 +134,17 @@ body {
 
 .hamburger {
   display: none;
-  cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
   width: 24px;
   height: 18px;
+  cursor: pointer;
 }
 
 .hamburger span {
   display: block;
-  height: 2px;
   width: 100%;
+  height: 2px;
   background-color: var(--text-main);
   border-radius: 2px;
   transition: 0.3s ease;
@@ -147,31 +154,31 @@ body {
    4. HERO SECTION COMPONENT
    ========================================================================== */
 .hero {
-  padding: 80px 20px 20px;
-  background: transparent;
-  color: var(--text-main);
-  height: 100vh;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  padding: 80px 20px 20px;
+  background: transparent;
+  color: var(--text-main);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .hero-container {
-  max-width: 800px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-image {
-  flex: 1;
   display: flex;
   justify-content: center;
+  flex: 1;
   min-width: 280px;
   margin-bottom: 5px;
 }
@@ -206,8 +213,8 @@ body {
 
 .hero-subtitle {
   font-size: 0.95rem;
-  color: #475569;
   font-weight: 500;
+  color: #475569;
   margin-bottom: 6px;
 }
 
@@ -220,24 +227,23 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 12px;
   gap: 6px;
-  background-color: #f0fdf4;
-  color: #166534;
+  margin: 12px auto 0;
   padding: 4px 12px;
-  border-radius: 20px;
   font-size: 0.78rem;
   font-weight: 600;
+  color: #166534;
+  background-color: #f0fdf4;
   border: 1px solid #bbf7d0;
+  border-radius: 20px;
 }
 
 .pulsing-dot {
+  display: inline-block;
   width: 8px;
   height: 8px;
   background-color: #22c55e;
   border-radius: 50%;
-  display: inline-block;
   box-shadow: 0 0 0 rgba(34, 197, 94, 0.4);
   animation: pulse 2s infinite;
 }
@@ -245,26 +251,26 @@ body {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   justify-content: center;
+  gap: 8px;
   margin: 4px 0 10px;
 }
 
 .tech-pill {
-  background-color: #ffffff;
-  color: #334155;
   padding: 5px 12px;
-  border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 500;
+  color: #334155;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
+  border-radius: 6px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
   transition: all 0.2s ease;
 }
 
 .tech-pill:hover {
-  border-color: #94a3b8;
   background-color: #f8fafc;
+  border-color: #94a3b8;
   transform: translateY(-1px);
 }
 
@@ -276,8 +282,8 @@ body {
 
 .hero-socials {
   display: flex;
-  gap: 12px;
   justify-content: center;
+  gap: 12px;
   margin-top: 8px;
 }
 
@@ -287,20 +293,20 @@ body {
   justify-content: center;
   width: 47px;
   height: 47px;
-  border-radius: 50%;
-  background-color: #ffffff;
   color: #334155;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
+  border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
   transition: all 0.2s ease;
 }
 
 .hero-socials a:hover {
-  background-color: #0f172a;
   color: #ffffff;
+  background-color: #0f172a;
   border-color: #0f172a;
-  transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .hero-section h1,
@@ -314,27 +320,26 @@ body {
    5. ABOUT & TECH STACK SECTION
    ========================================================================== */
 .about-section {
+  padding: 25px 0 50px 0;
   background-color: transparent;
-  padding: 25px 0 50px 0; /* Dikurangi dari 85px jadi 25px biar rapat */
-  scroll-margin-top: 70px; /* Dinaikkan biar pas mendarat di bawah navbar */
+  scroll-margin-top: 70px;
 }
 
-/* Grid Layout Default (Mobile First = 1 Kolom) */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default 1 kolom untuk HP/Tablet */
-  gap: 20px;
+  grid-template-columns: 1fr;
   align-items: stretch;
+  gap: 20px;
 }
 
 .bio-card,
 .education-card,
 .tech-stack-container,
 .soft-skills-card {
+  padding: 18px 22px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 18px 22px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
@@ -361,11 +366,11 @@ body {
 }
 
 .bio-card p {
+  font-size: 0.925rem;
   color: #475569;
   line-height: 1.6;
-  margin-bottom: 12px;
-  font-size: 0.925rem;
   text-align: justify;
+  margin-bottom: 12px;
 }
 
 .bio-card p:last-child {
@@ -374,26 +379,26 @@ body {
 
 /* Education Timeline */
 .education-timeline {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  position: relative;
+  margin-top: 16px;
+  margin-left: 10px;
   padding-left: 20px;
   border-left: 2px solid #e2e8f0;
-  margin-left: 10px;
-  margin-top: 16px;
 }
 
 .edu-item::before {
   content: "";
   position: absolute;
-  left: -25px;
   top: 6px;
+  left: -25px;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   background-color: #64748b;
   border: 2px solid #ffffff;
+  border-radius: 50%;
   box-sizing: border-box;
 }
 
@@ -405,11 +410,11 @@ body {
 
 .edu-badge {
   display: inline-block;
-  background-color: #dcfce7;
-  color: #15803d;
+  padding: 2px 8px;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 2px 8px;
+  color: #15803d;
+  background-color: #dcfce7;
   border-radius: 12px;
   margin-bottom: 10px;
 }
@@ -418,8 +423,8 @@ body {
   font-size: 0.95rem;
   font-weight: 600;
   color: #1e293b;
-  margin-bottom: 5px;
   line-height: 1.4;
+  margin-bottom: 5px;
 }
 
 .edu-school {
@@ -430,8 +435,8 @@ body {
 
 .edu-date {
   font-size: 0.8rem;
-  color: #94a3b8;
   font-weight: 500;
+  color: #94a3b8;
 }
 
 /* Technical Badges */
@@ -463,19 +468,19 @@ body {
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 500;
   color: #334155;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
 
 .badge-item:hover {
   border-color: #cbd5e1;
-  transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
 }
 
 .badge-item img {
@@ -508,17 +513,17 @@ body {
 }
 
 .skills-list {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .skills-list li {
-  font-size: 0.9rem;
-  color: #334155;
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 0.9rem;
+  color: #334155;
   margin-bottom: 12px;
 }
 
@@ -534,8 +539,8 @@ body {
   font-size: 0.875rem;
   color: #475569;
   line-height: 1.5;
-  margin-bottom: 8px;
   text-align: justify;
+  margin-bottom: 8px;
 }
 
 .focus-text:last-child {
@@ -543,63 +548,369 @@ body {
 }
 
 /* ==========================================================================
-   6. BUTTONS & UI ELEMENTS
+   6. PROJECTS SHOWCASE SECTION
+   ========================================================================== */
+.projects-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-top: 5rem;
+  scroll-margin-top: 80px;
+}
+
+.projects-swiper {
+  position: relative;
+  max-width: 680px;
+  margin: 1.5rem auto 0 auto;
+  padding: 0 0 3rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.project-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img-wrapper img {
+  transform: scale(1.04);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.75rem;
+}
+
+.project-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.project-content p {
+  flex-grow: 1;
+  font-size: 0.925rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-tags span {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.project-links a {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-github {
+  padding: 8px 16px;
+  font-weight: 500;
+  color: #495057;
+  background-color: #f1f3f5;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-github:hover {
+  color: var(--github-hover-text);
+  background-color: var(--github-hover-bg);
+  border-color: var(--github-hover-bg);
+  box-shadow: var(--github-shadow);
+  transform: scale(1.05);
+}
+
+/* Swiper Pagination & Navigation Controls */
+.projects-swiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after {
+  top: 45%;
+  color: #475569 !important;
+  transform: scale(0.65);
+}
+
+.swiper-button-prev {
+  left: 0.5rem;
+  right: -45px;
+}
+
+.swiper-button-next {
+  right: 0.5rem;
+}
+
+.projects-swiper .swiper-pagination-bullet-active {
+  background-color: #475569 !important;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  background-color: #cbd5e1;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   7. CONTACT SECTION
+   ========================================================================== */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  min-height: calc(100vh - 60px);
+  margin: 0 auto;
+  padding: 70px 20px 80px 20px;
+  scroll-margin-top: 0px;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.contact-title {
+  font-family: "Georgia", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  transition: color 0.3s ease;
+}
+
+.card-arrow {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  opacity: 0;
+  transform: translate(-5px, 5px);
+  transition: all 0.3s ease;
+}
+
+/* Contact Card Hover States */
+.contact-card:hover {
+  background-color: #0f172a;
+  border-color: #0f172a;
+  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.25);
+  transform: translateY(-4px);
+}
+
+.contact-card:hover .card-icon {
+  color: #0f172a;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.contact-card:hover .card-label {
+  color: #94a3b8;
+}
+
+.contact-card:hover .card-value {
+  color: #ffffff;
+}
+
+.contact-card:hover .card-arrow {
+  opacity: 1;
+  color: #ffffff;
+  transform: translate(0, 0);
+}
+
+/* ==========================================================================
+   8. FOOTER COMPONENT
+   ========================================================================== */
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.main-footer p {
+  font-family: "Georgia", serif;
+  font-size: 0.85rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* ==========================================================================
+   9. BUTTONS & UI ELEMENTS
    ========================================================================== */
 .btn {
+  display: inline-block;
   padding: 12px 26px;
-  border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #0f172a;
   color: #ffffff;
+  background-color: #0f172a;
   border: 1px solid #0f172a;
 }
 
 .btn-primary:hover {
-  background-color: #1e293b;
   color: #ffffff;
-  transform: translateY(-2px);
+  background-color: #1e293b;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: transparent;
   color: #0f172a;
+  background-color: transparent;
   border: 1px solid #0f172a;
 }
 
 .btn-secondary:hover {
-  background-color: #0f172a;
   color: #ffffff;
-  transform: translateY(-2px);
+  background-color: #0f172a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
-  background-color: transparent;
-  color: #000000 !important;
-  border: 1px solid #000000;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 600;
+  color: #000000 !important;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
-  background-color: #000000;
   color: #ffffff !important;
+  background-color: #000000;
 }
 
 /* ==========================================================================
-   7. ANIMATIONS
+   10. ANIMATIONS
    ========================================================================== */
 @keyframes pulse {
   0% {
@@ -617,12 +928,10 @@ body {
 }
 
 /* ==========================================================================
-   8. MEDIA QUERIES (RESPONSIVE)
+   11. MEDIA QUERIES (RESPONSIVE)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   Desktop & Wide Screen Layout (≥ 992px)
-   -------------------------------------------------------------------------- */
+/* Desktop & Wide Screen Layout (≥ 992px) */
 @media (min-width: 992px) {
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -634,11 +943,8 @@ body {
   }
 }
 
-/* --------------------------------------------------------------------------
-   Mobile & Tablet Layout (< 991px)
-   -------------------------------------------------------------------------- */
+/* Mobile & Tablet Layout (< 991px) */
 @media (max-width: 991px) {
-  /* Navbar Mobile Component */
   .hamburger {
     display: flex;
   }
@@ -651,18 +957,18 @@ body {
     position: absolute;
     top: var(--nav-height);
     left: 0;
-    width: 100%;
-    background-color: var(--bg-navbar);
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 2rem;
+    gap: 0;
+    width: 100%;
     max-height: 0;
-    overflow: hidden;
+    padding: 0 2rem;
+    background-color: var(--bg-navbar);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
     transition:
       max-height 0.3s ease,
       padding 0.3s ease;
-    gap: 0;
   }
 
   .nav-menu .nav-link,
@@ -695,19 +1001,18 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Hero Section Mobile / Tablet Layout */
   .hero {
-    padding: 100px 16px 40px !important;
     height: auto !important;
     min-height: 100vh;
+    padding: 100px 16px 40px !important;
   }
 
   .hero-container {
     flex-direction: column !important;
-    justify-content: center !important;
     align-items: center !important;
-    text-align: center !important;
+    justify-content: center !important;
     width: 100% !important;
+    text-align: center !important;
   }
 
   .hero-image {
@@ -726,8 +1031,8 @@ body {
   }
 
   .hero-subtitle {
-    text-align: center !important;
     font-size: 0.85rem !important;
+    text-align: center !important;
   }
 
   .tech-stack {
@@ -737,9 +1042,9 @@ body {
   .hero-buttons {
     flex-direction: row !important;
     flex-wrap: wrap;
-    width: 100% !important;
-    gap: 10px !important;
     justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
 
   .hero-buttons .btn {
@@ -748,7 +1053,6 @@ body {
     text-align: center !important;
   }
 
-  /* About Section Responsive Adjustments */
   .about-section {
     padding: 60px 0 30px 0;
   }
@@ -757,28 +1061,44 @@ body {
   .education-card,
   .tech-stack-container,
   .soft-skills-card {
-    padding: 16px;
     margin-top: 0;
     margin-bottom: 0;
+    padding: 16px;
   }
 
   .bio-card p {
-    text-align: left; /* Teks gak berjarak aneh gara-gara justify di HP */
+    text-align: left;
   }
 
   .education-timeline {
-    padding-left: 15px;
     margin-left: 5px;
+    padding-left: 15px;
   }
 
   .edu-item::before {
-    left: -20px; /* Posisi titik timeline disesuaikan */
+    left: -20px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   Extra Small Screen / Mobile Portrait (≤ 480px)
-   -------------------------------------------------------------------------- */
+/* Medium Screens & Mobile Landscape (≤ 768px) */
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: 10px;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+}
+
+/* Small Screens / Mobile Layout (≤ 640px) */
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra Small Screen / Mobile Portrait (≤ 480px) */
 @media (max-width: 480px) {
   .hero-buttons {
     flex-direction: column !important;
@@ -787,389 +1107,4 @@ body {
   .hero-buttons .btn {
     width: 100% !important;
   }
-}
-
-/* belum di rapihkan */
-/* ========================================== */
-/* STYLING PROJECTS SHOWCASE CAROUSEL (1 CARD)*/
-/* ========================================== */
-/* Rapikan spacing Projects agar tidak merusak layout section About */
-.projects-section {
-  margin-top: 5rem; /* Diturunkan dari 5rem agar tidak terlalu mendorong ke atas */
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  scroll-margin-top: 80px;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
-
-/* Judul Section (About Me & Projects Showcase) */
-.section-header h2 {
-  font-size: 2.25rem; /* Ukuran h2 disamakan */
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.025em;
-}
-
-/* Deskripsi di bawah Judul */
-.section-header p {
-  font-size: 1rem; /* Ukuran p disamakan */
-  color: #6b7280;
-  max-width: 850px; /* Supaya teks deskripsi tidak terlalu lebar ke samping */
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-/* Container Carousel Swiper - Ditingkatkan ke 680px biar makin tegas */
-.projects-swiper {
-  max-width: 680px;
-  margin: 1.5rem auto 0 auto;
-  padding: 0 0 3rem 0; /* Hapus padding samping biar card murni di tengah */
-  position: relative;
-}
-
-/* Memastikan tinggi card sama */
-.swiper-slide {
-  height: auto;
-  display: flex;
-}
-
-/* Card Styling - Ukuran Teks dan Gambar Ditingkatkan */
-.project-card {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-}
-
-/* Pembungkus Gambar - Tingginya Ditingkatkan */
-.project-img-wrapper {
-  width: 100%;
-  height: 280px; /* Bikin area screenshot proyek lebih lega & jelas */
-  background-color: #f8fafc;
-  position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.project-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-img-wrapper img {
-  transform: scale(1.04);
-}
-
-/* Konten Card */
-.project-content {
-  padding: 1.75rem; /* Menambah ruang di dalam card */
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.project-content h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-}
-
-/* Deskripsi Proyek - Bikin baris teks lebih lega */
-.project-content p {
-  font-size: 0.925rem;
-  color: #4b5563;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-/* Tag Tech Stack */
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-tags span {
-  font-size: 0.75rem;
-  background-color: #f3f4f6;
-  color: #4b5563;
-  padding: 0.2rem 0.55rem;
-  border-radius: 6px;
-  font-weight: 500;
-}
-
-/* Deskripsi Proyek */
-.project-content p {
-  font-size: 0.9rem;
-  color: #4b5563;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-/* Tombol Aksi */
-.project-links {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: auto;
-}
-
-.project-links a {
-  font-size: 0.825rem;
-  font-weight: 500;
-  padding: 0.45rem 0.9rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-/* Base style tombol GitHub sebelum disorot */
-.btn-github {
-  /* Style visual bawaan (background abu terang seperti di image 8) */
-  background-color: #f1f3f5;
-  color: #495057;
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
-  padding: 8px 16px;
-  font-weight: 500;
-  cursor: pointer;
-
-  /* --- INI KUNCINYA AGAR HALUS --- */
-  /* Transition transparan agar tidak patah-patah */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Persiapan transform agar tidak goyang saat hover */
-  transform: scale(1);
-}
-
-/* Style tombol GitHub SAAT DISOROT (HOVER) */
-.btn-github:hover {
-  /* 1 & 2. Ganti warna background dan teks */
-  background-color: var(--github-hover-bg);
-  color: var(--github-hover-text);
-  border-color: var(--github-hover-bg); /* Biar border ikut gelap */
-
-  /* 3. Perubahan Ukuran (Zoom-in) */
-  transform: scale(1.05); /* Membesar 5% */
-
-  /* 4. Tambahkan Bayangan (Float effect) */
-  box-shadow: var(--github-shadow);
-}
-
-/* Posisi Tombol Panah Biar Berada Di Luar Card */
-.projects-swiper .swiper-button-prev::after,
-.projects-swiper .swiper-button-next::after {
-  color: #475569 !important; /* Warna titik tengah Education */
-  transform: scale(0.65);
-  top: 45%; /* Posisi vertikal sejajar tengah card */
-}
-
-.swiper-button-prev {
-  left: 0.5rem;
-  right: -45px; /* Geser keluar ke kanan card */
-}
-
-.swiper-button-next {
-  right: 0.5rem;
-}
-
-/* Pagination Bullet Aktif - Slate Dark */
-.projects-swiper .swiper-pagination-bullet-active {
-  background-color: #475569 !important;
-}
-
-/* Pagination Bullet Tidak Aktif */
-.projects-swiper .swiper-pagination-bullet {
-  background-color: #cbd5e1;
-  opacity: 1;
-}
-
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-  .section-header h2 {
-    font-size: 1.75rem;
-  }
-  .section-header p {
-    font-size: 0.9rem;
-  }
-  .swiper-button-prev {
-    left: 10px;
-  }
-  .swiper-button-next {
-    right: 10px;
-  }
-}
-
-/* ================= CONTACT SECTION ================= */
-.contact-section {
-  padding: 70px 20px 80px 20px; /* Tambah padding atas lebih banyak */
-  max-width: 900px;
-  margin: 0 auto;
-  min-height: calc(100vh - 60px); /* Memperhitungkan space untuk footer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Menempatkan grid persis di tengah vertikal */
-  scroll-margin-top: 0px; /* Reset scroll offset */
-}
-
-.contact-header {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.contact-title {
-  font-family: "Georgia", serif;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.5px;
-  margin-bottom: 15px;
-}
-
-.contact-subtitle {
-  font-family: "Georgia", serif;
-  font-size: 1rem;
-  color: #64748b;
-}
-
-/* Grid Layout 2 Kolom */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-/* Interactive Card Style */
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  position: relative;
-}
-
-/* Icon Container Bulat */
-.card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0f172a;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-/* Info Text Styling */
-.card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex-grow: 1;
-}
-
-.card-label {
-  font-size: 0.8rem;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-}
-
-.card-value {
-  font-size: 0.95rem;
-  color: #0f172a;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.card-arrow {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  opacity: 0;
-  transform: translate(-5px, 5px);
-  transition: all 0.3s ease;
-}
-
-/* Hover State Elegan (Hover Card-nya langsung) */
-.contact-card:hover {
-  background-color: #0f172a;
-  border-color: #0f172a;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.25);
-}
-
-.contact-card:hover .card-icon {
-  background-color: #ffffff;
-  color: #0f172a;
-  border-color: #ffffff;
-}
-
-.contact-card:hover .card-label {
-  color: #94a3b8;
-}
-
-.contact-card:hover .card-value {
-  color: #ffffff;
-}
-
-.contact-card:hover .card-arrow {
-  opacity: 1;
-  color: #ffffff;
-  transform: translate(0, 0);
-}
-
-/* Responsive Mobile */
-@media (max-width: 640px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ================= FOOTER STYLING ================= */
-.main-footer {
-  height: 60px; /* Set tinggi pasti footer */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* border-top: 1px solid #e2e8f0; */
-  box-sizing: border-box;
-}
-
-.main-footer p {
-  font-family: "Georgia", serif;
-  font-size: 0.85rem;
-  color: #0f172a;
-  margin: 0;
 }
