@@ -793,15 +793,12 @@ body {
 /* ========================================== */
 /* STYLING PROJECTS SHOWCASE CAROUSEL (1 CARD)*/
 /* ========================================== */
-#projects {
-  scroll-margin-top: 80px;
-}
-
 /* Rapikan spacing Projects agar tidak merusak layout section About */
 .projects-section {
   margin-top: 5rem; /* Diturunkan dari 5rem agar tidak terlalu mendorong ke atas */
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
+  scroll-margin-top: 80px;
 }
 .section-header {
   text-align: center;
@@ -1025,9 +1022,9 @@ body {
   }
 }
 
-/* ================= REVAMPED CONTACT SECTION ================= */
+/* ================= CONTACT SECTION ================= */
 .contact-section {
-  padding: 100px 20px 80px 20px; /* Tambah padding atas lebih banyak */
+  padding: 70px 20px 80px 20px; /* Tambah padding atas lebih banyak */
   max-width: 900px;
   margin: 0 auto;
   min-height: 100vh; /* Memaksa section berukuran minimal setinggi 1 layar penuh */
@@ -1039,21 +1036,21 @@ body {
 
 .contact-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 .contact-title {
   font-family: "Georgia", serif;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #0f172a;
   letter-spacing: -0.5px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
 .contact-subtitle {
   font-family: "Georgia", serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #64748b;
 }
 
@@ -1061,7 +1058,7 @@ body {
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
 }
 
 /* Interactive Card Style */
